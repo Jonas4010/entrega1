@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Mi Primer Sitio Web</title>
+    <link rel="stylesheet" href="/style2.css">
+</head>
+<body bgcolor="e2dedd">
+    <header>
+        <nav>
+            <h1 style="color: #0cea0f; text-align: center; background-color: lightskyblue; font-family: Verdana, Geneva, Tahoma, sans-serif;">Business Administrator JHON SUAREZ - WELCOME</h1>
+            <p style="color: rgb(59, 13, 77); text-align: center; font-family: Verdana, Geneva, Tahoma, sans-serif;">Import & Export tutorials, SEE YOU!!</p>
+            <h2 style="color: blueviolet; text-align: justify; font-family: Verdana, Geneva, Tahoma, sans-serif;">About Me</h2>
+            <p style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Hi, My name is JHON SUAREZ from Duitama Boyaca, Im ready to teach you about the complex international business deal, also Im able to prepare all documents you need to make your first international deal as import as export exercise, just let me know about your needs and I will be contact with you.</p>
+            
+            <img src="foto.jpeg" width="10%" height="10%" border="3">
+            <img src="carreer.jpeg" width="20%" height="20%" border="3">
+            <img src="business.jpeg" width="25%" height="25%" border="3">
+            <h2 style="color: rgb(243, 10, 37); text-align: justify; font-family: Verdana, Geneva, Tahoma, sans-serif;">Contact</h2>
+            <p style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Contact by <a href="http://www.instagram.com/Jonas.jpeg">Social Network</a></p>
+    
+            <hr>
+			<h2 style="color: rgb(235, 33, 94); text-align: justify; font-family: Verdana, Geneva, Tahoma, sans-serif;">Hobbies</h2>
+		    <ul>
+                <li style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Running</li>
+                <li style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Reading and studying</li>
+                <li style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Go to the Movies</li>
+            
+			</ul>
+              <hr>
+		      <h2 style="color: rgb(86, 15, 218); text-align: justify; font-family: Verdana, Geneva, Tahoma, sans-serif;">Priority Tasks</h2>
+		    <ol>
+			    <li style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Lesson organization</li>
+			    <li style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Reading world regulation </li>
+			    <li style="font-family: Verdana, Geneva, Tahoma, sans-serif;">class preparing</li>
+			    <li style="font-family: Verdana, Geneva, Tahoma, sans-serif;">costumers Target</li>
+			    <li style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Staff training</li>	
+		    </ol>
+            <hr>
+		    <h2 style="color: rgb(226, 97, 17); text-align: justify; font-family: Verdana, Geneva, Tahoma, sans-serif;">Schedule</h2>
+
+        </nav>
+    </header>
+    <div>
+		<table border="3" wi
+        
+        
+        
+        
+        dth="80%" style="color: rgb(50, 22, 175); background-color: rgb(233, 233, 200);">
+			<thead>
+				<tr>
+					<th style="color: rgb(194, 26, 166); text-align: center; font-family: Verdana, Geneva, Tahoma, sans-serif;">Monday</th>
+					<th style="color: rgb(194, 26, 166); text-align: center; font-family: Verdana, Geneva, Tahoma, sans-serif;">Tuesday</th>
+					<th style="color: rgb(194, 26, 166); text-align: center; font-family: Verdana, Geneva, Tahoma, sans-serif;">Wednesday</th>
+					<th style="color: rgb(194, 26, 166); text-align: center; font-family: Verdana, Geneva, Tahoma, sans-serif;">Thursday</th>
+					<th style="color: rgb(194, 26, 166); text-align: center; font-family: Verdana, Geneva, Tahoma, sans-serif;">Friday</th>
+				</tr>
+			</thead>
+            <tbody>
+				<tr>
+					<td style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Speak and translate documents</td>
+					<td style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Contact costumers aroud the world </td>
+					<td style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Tell us about your experience</td>
+					<td style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Business traveling</td>
+					<td style="font-family: Verdana, Geneva, Tahoma, sans-serif;">businees devoloping</td>
+
+				</tr>
+			</tbody>
+		</table>
+        <hr>
+    </div>
+
+    <div class="Variables_tipo">
+        <h3 style="color: rgb(41, 128, 139); text-align: justify; font-family: Verdana, Geneva, Tahoma, sans-serif;">USER FORM</h3>
+
+        <form id="userForm">
+            <label for="nombre">Name:</label>
+            <input type="text" id="nombre" required>
+
+            <label for="contacto">Contact:</label>
+            <input type="text" id="contacto" required>
+
+            <label>Correo: </label>
+            <input type="email" id="email" name="email">
+            
+            <label for="edad">Age:</label>
+            <input type="number" id="edad" required>
+
+            <button type="submit">Send</button>
+        </form>
+
+        <h3 style="color: rgb(41, 128, 139); text-align: justify; font-family: Verdana, Geneva, Tahoma, sans-serif;">Data Type:</h3>
+        <p id="resultado"></p>
+
+        <script>
+            document.getElementById("userForm").addEventListener("submit", function (event) {
+                event.preventDefault(); // Evita que la página se recargue
+
+                // Capturar datos
+                let nombre = document.getElementById("nombre").value.trim();
+                let contacto = document.getElementById("contacto").value.trim();
+                let email = document.getElementById("email").value.trim();
+                let edad = document.getElementById("edad").value.trim();
+                let EsEstudiante = "Si";
+
+                // Validación básica
+                if (nombre === "" || contacto === "" || email === "" || edad === "") {
+                    alert("Todos los campos son obligatorios.");
+                    return;
+                }
+                // Verificacion de variable numerica
+                edad = parseInt(edad);
+                if (isNaN(edad) || edad <= 0) {
+                    alert("Ingrese una edad válida.");
+                    return;
+                }
+
+                let mensajeEdad = edad >= 18 ? "Mayor de edad" : "Menor de edad";
+
+                // Mostrar datos en la página
+                document.getElementById("resultado").innerText = `Nombre: ${nombre}, Motivo de Contacto: ${contacto}, email: ${email}, Edad: ${edad}, ${mensajeEdad}`;
+            });
+            
+            l
+        </script>
+    </div>      
+    <br>
+    <footer>
+        <hr>
+		<p>&copy; 2025 reserved rights.</center>	
+		</p>
+    </footer>
+
+</body>
+</html>
